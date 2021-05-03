@@ -1,0 +1,10 @@
+# work related stuff that i don't need in my site
+/work-related
+
+# scss files
+/styles/*/
+/styles/style.scss
+/styles/style.css.map
+
+#ignore posts for now
+/posts
