@@ -6,7 +6,7 @@ window.addEventListener('load', function () {
     fetch(`/posts-md-version/${title}.md`)
         .then(res => {
             if (res.status === 404) {
-                // window.location.href = "/404.html";
+                window.location.href = "/404.html";
             }
 
             return res.text();
