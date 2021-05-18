@@ -534,4 +534,14 @@ body.home .card ul li {
   display: inline-block;
   padding: 16px;
 }
+
+body.home a.card {
+  min-height: unset;
+  display: block;
+}
+
+body.posts a.card {
+  min-height: unset;
+  display: block;
+}
 /*# sourceMappingURL=style.css.map */

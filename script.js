@@ -1,51 +1,8 @@
 window.addEventListener('load', function () {
-    let siteHeaderValue = `
-        <header>
-            <div class="container">
-                <h1>Jan de Vera</h1>
-                <button>
-                    <span class="fa fa-bars"></span>
-                </button>
-                <ul>
-                    <li>
-                        <a href="/">Home</a>
-                    </li>
-                </ul>
-            </div>
-        </header>
-    `;
-    let siteFooterValue = `
-        <footer>
-            <div class="container">
-                <ul>
-                    <li>
-                        <a href="mailto:deveraj.slash@gmail.com">
-                            <span class="fa fa-envelope"></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.facebook.com/boringlyboring">
-                            <span class="fa fa-facebook"></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.twitter.com/boringlyboring">
-                            <span class="fa fa-twitter"></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.instagram.com/boringlyboring">
-                            <span class="fa fa-instagram"></span>
-                        </a>
-                    </li>
-                </ul>
-                <small>&copy; ${new Date().getFullYear()} Jan de Vera</small>
-            </div>
-        </footer>
-    `;
-    let bodyContent = document.body.innerHTML;
+    // set year of footer
+    document.querySelector("body > footer small").innerHTML = `&copy; ${new Date().getFullYear()} Jan de Vera`;
 
-    document.body.innerHTML = siteHeaderValue + bodyContent + siteFooterValue;
+    // set sticky footer
     document.querySelector("body > footer").style.position = document.body.offsetHeight > window.innerHeight ? "static" : "fixed";
     document.querySelector("header button").onclick = () => {
         let headerMenu = document.querySelector("header ul");
@@ -57,6 +14,7 @@ window.addEventListener('load', function () {
         }
     }
 
+    // check footer status on resize
     window.addEventListener("resize", () => {
         document.querySelector("body > footer").style.position = document.body.offsetHeight > window.innerHeight ? "static" : "fixed";
     });
