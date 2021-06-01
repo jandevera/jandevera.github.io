@@ -14,5 +14,6 @@ window.addEventListener('load', function () {
         .then(res => {
             document.querySelector('.content .col-12').innerHTML = marked(res);
             document.title = `${document.querySelector(".content .col-12 h1").textContent} - Jan de Vera`;
+            document.querySelector("body > footer").style.position = document.body.offsetHeight > window.innerHeight ? "static" : "fixed";
         });
 });
