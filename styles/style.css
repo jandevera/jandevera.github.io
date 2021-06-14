@@ -541,7 +541,7 @@ body.home a.card {
 }
 
 body.posts a.card {
-  min-height: unset;
+  min-height: 120px;
   display: block;
 }
 /*# sourceMappingURL=style.css.map */
